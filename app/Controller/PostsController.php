@@ -18,8 +18,10 @@ class PostsController extends AppController{
     }
    
     public function show(){
+        $this->loadModel('Comment');
         $article = $this->Post->findWithId($_GET['id']);
-        $this->render('posts.show', compact('article'));
+        $comment = $this->Comment->Comments($_GET['id']);
+        $this->render('posts.show', compact('article', 'comment'));
     }
 
 }

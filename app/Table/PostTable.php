@@ -29,4 +29,5 @@ class PostTable extends Table{
             FROM articles
             WHERE articles.id = ?", [$id], true);
     }
+
 }
