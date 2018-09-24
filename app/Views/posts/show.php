@@ -2,6 +2,9 @@
 
 <p><?= $article->contenu; ?></p>
 
-<p><?= $comment[0]->nom; ?></p>
+<?php foreach($comment as $comments): ?>
+<p><?= $comments->nom; ?></p>
 
-<p><?= $comment[0]->contenu; ?></p>
+<p><?= $comments->contenu; ?></p>
+
+<?php endforeach; ?>
