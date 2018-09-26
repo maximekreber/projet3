@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Core\Controller\Controller;
+use Core\HTML\BootstrapForm;
 
 class PostsController extends AppController{
 
@@ -24,4 +25,21 @@ class PostsController extends AppController{
         $this->render('posts.show', compact('article', 'comment'));
     }
 
+     public function addcomment(){
+        if (!empty($_POST)) {
+            $this->loadModel('Comment');
+            $result = $this->Comment->create([
+                'articles_id' => $_POST['articles_id'],
+                'nom' => $_POST['nom'],
+                'contenu' => $_POST['contenu'],
+            ]);
+            if($result){
+                return $this->index();
+            }
+        }
+        $this->loadModel('Comment');
+        $posts = $this->Comment->extract('articles_id', 'nom', 'contenu');
+        $form = new BootstrapForm();
+        $this->render('posts.addcomment', compact('posts', 'form'));
+    }
 }
