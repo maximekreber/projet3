@@ -14,7 +14,7 @@ class CommentTable extends Table{
      */
     public function Comments($id){
         return $this->query("
-            SELECT comments.id, comments.nom, comments.contenu, comments.date, articles.id as articles
+            SELECT comments.id, comments.nom, comments.contenu, comments.date, comments.signale, articles.id as articles
             FROM comments
             LEFT JOIN articles ON articles_id = articles.id
             WHERE comments.articles_id = ?

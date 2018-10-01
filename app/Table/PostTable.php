@@ -19,7 +19,7 @@ class PostTable extends Table{
     }
     
     /**
-     * Récupère un article en liant la catégorie associée
+     * Récupère un article en liant l'id associée
      * @param $id int
      * @return \App\Entity\PostEntity
      */

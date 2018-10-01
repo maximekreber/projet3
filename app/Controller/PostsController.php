@@ -33,7 +33,7 @@ class PostsController extends AppController{
                 'nom' => $_POST['nom'],
                 'contenu' => $_POST['contenu'],
             ]);
-            if($result){
+                     if($result){
                 return $this->index();
             }
         }
@@ -42,4 +42,15 @@ class PostsController extends AppController{
         $form = new BootstrapForm();
         $this->render('posts.addcomment', compact('posts', 'form'));
     }
+
+     public function signale(){
+            $this->loadModel('Comment');
+            $result = $this->Comment->update($_GET['comments_id'], [
+                'signale' =>  1,
+            ]);
+                
+            return $this->show();
+        }
+    
+
 }
