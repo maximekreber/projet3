@@ -45,7 +45,7 @@ class PostsController extends AppController{
 
      public function signale(){
             $this->loadModel('Comment');
-            $result = $this->Comment->update($_GET['comments_id'], [
+            $this->Comment->update($_GET['comments_id'], [
                 'signale' =>  1,
             ]);
                 

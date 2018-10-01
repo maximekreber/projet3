@@ -31,9 +31,16 @@ class CommentsController extends AppController{
 
     public function delete(){
         if (!empty($_POST)) {
-            $result = $this->Comment->delete($_POST['id']);
+            $this->Comment->delete($_POST['id']);
             return $this->index();
         }
     }
+    public function signale(){
+             $this->Comment->update($_POST['id'], [
+                'signale' =>  0,
+            ]);
+                
+            return $this->index();
+        }
 
 }

@@ -1,7 +1,8 @@
 <h1>Administrer les articles</h1>
 
 <p>
-    <a href="?p=admin.posts.add" class="btn btn-success">Ajouter</a>
+    <a href="?p=admin.posts.add" class="btn btn-success">Ajouter un article</a>
+    <a href="?p=admin.comments.index" class="btn btn-success" >Administrer les commentaires</a>
 </p>
 
 <table class="table">

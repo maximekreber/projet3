@@ -1,5 +1,7 @@
 <h1>Administrer les commentaires</h1>
-
+<p>
+    <a href="?p=admin.posts.index" class="btn btn-success">Administrer les articles</a>
+</p>
 
 <table class="table">
     <thead>
@@ -20,6 +22,12 @@
                     <input type="hidden" name="id" value="<?= $comments->id ?>">
                     <button type="submit" class="btn btn-danger">Supprimer</button>
                 </form>
+                <?php 
+                if($comments->signale !=0 ){ ?>
+                <form action="?p=admin.comments.signale" method="post" style="display: inline;">
+                    <input type="hidden" name="id" value="<?= $comments->id ?>">
+                    <button type="submit" class="btn btn-primary">Enlever le signalement</button>
+                </form> <?php } ?>
             </td>
         </tr>
         <?php endforeach; ?>
