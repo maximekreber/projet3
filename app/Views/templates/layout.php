@@ -12,16 +12,17 @@
 
     <!-- Bootstrap core CSS -->
     <link href=".../../../vendors/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href=".../../../public/css/style.css" rel="stylesheet">
 
 </head>
             
 <body>
 
-<nav class="navbar navbar-expand-lg bg-primary">
+<nav class="navbar navbar-expand-lg bg-menu">
   <a class="navbar-brand text-success" href="index.php">Accueil</a>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <div class="navbar-nav text-success">
-      <a class="nav-item nav-link active" href="index.php?p=users.login">Login</a>
+      <a class="nav-item nav-link active text-success" href="index.php?p=users.login">Login</a>
     </div>
   </div>
 </nav>

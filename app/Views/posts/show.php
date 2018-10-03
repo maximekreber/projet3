@@ -2,10 +2,14 @@
 
 <p><?= $article->contenu; ?></p>
 
-<?php foreach($comment as $comments): ?>
-<p><?= $comments->nom; ?></p>
+<p><?= $article->date; ?></p>
 
-<p><?= $comments->contenu; ?></p>
+<?php foreach($comment as $comments): ?>
+<p>Nom : <?= $comments->nom; ?></p>
+
+<p>Contenu : <?= $comments->contenu; ?></p>
+
+<p>Date : <?= $comments->date; ?> </p>
 
 <p> <?php if ($comments->signale !=0) {
      	?> <a class="btn btn-danger" href="?p=posts.signale&id=<?= $article->id; ?>&comments_id=<?= $comments->id; ?>">Commentaire Signalé</a> <?php
