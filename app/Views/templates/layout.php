@@ -8,6 +8,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
+    <script src=".../../../vendors/Tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+
     <title><?= App::getInstance()->title; ?></title>
 
     <!-- Bootstrap core CSS -->
