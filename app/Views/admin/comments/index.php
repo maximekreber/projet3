@@ -7,7 +7,7 @@
     <thead>
     <tr>
         <td>ID</td>
-        <td>Article ID</td>
+        <td class="d-none d-sm-block">Article ID</td>
         <td>Nom</td>
         <td>Actions</td>
     </tr>
@@ -16,7 +16,7 @@
         <?php foreach($items as $comments): ?>
        <?php if($comments->signale !=0 ) { ?> <tr class="signale"> <?php } else { ?> <tr> <?php } ?>
             <td><?= $comments->id; ?></td>
-            <td><?= $comments->articles_id; ?></td>
+            <td class="d-none d-sm-block"><?= $comments->articles_id; ?></td>
           <td><?= $comments->nom; ?></td> 
             <td>
                 <a class="btn btn-primary" href="?p=admin.comments.edit&id=<?= $comments->id; ?>">Editer</a>

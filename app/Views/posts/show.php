@@ -1,7 +1,7 @@
       <div class="row">
 
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
 
           <!-- Title -->
           <h1 class="mt-4"><?= $article->titre; ?></h1>
@@ -17,10 +17,8 @@
           <p>Posté le <?= $article->date; ?></p>
 
           <hr>
-
           <!-- Preview Image -->
-          <img class="rounded" src="<?= $article->image; ?>" width="900" height="300" alt="image article">
-
+          <img class="col-lg-12 rounded" src="<?= $article->image; ?>" width="900" height="300" alt="image article">
           <hr>
 
           <!-- Post Content -->

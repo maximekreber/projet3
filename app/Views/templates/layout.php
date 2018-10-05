@@ -38,6 +38,8 @@
 
 </div>    <!-- /.container -->
 
+</body>
+
     <footer class="footer py-3 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Jean Forteroche
@@ -45,5 +47,5 @@
         <a class="text-white" href="index.php?p=users.login">Accès au panel d'administration</a></p>
       </div>
     </footer>
-</body>
+
 </html>
