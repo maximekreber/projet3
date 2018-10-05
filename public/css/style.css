@@ -1,4 +1,20 @@
+.footer
+{
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+}
 .bg-menu
 {
-background-color: #e3f2fd;
+background-color: #462673;
 }
+.signale
+{
+background-color: red ;
+}
+.text-menu
+{
+color: #99D581 ;	
+}
+

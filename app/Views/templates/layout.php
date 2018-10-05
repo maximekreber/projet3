@@ -9,7 +9,8 @@
     <link rel="icon" href="../../favicon.ico">
 
     <script src=".../../../vendors/Tinymce/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
+    <script>tinymce.init({ selector:'textarea', 
+  language : "fr_FR"});</script>
 
     <title><?= App::getInstance()->title; ?></title>
 
@@ -22,10 +23,10 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-menu">
-  <a class="navbar-brand text-success" href="index.php">Accueil</a>
+  <a class="navbar-brand text-menu" href="index.php">Blog de Jean Forteroche</a>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-    <div class="navbar-nav text-success">
-      <a class="nav-item nav-link active text-success" href="index.php?p=users.login">Login</a>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-menu" href="index.php">Accueil</a>
     </div>
   </div>
 </nav>
@@ -35,9 +36,9 @@
         <?= $content; ?>
     </div>
 
-</div><!-- /.container -->
+</div>    <!-- /.container -->
 
-    <footer class="py-5 bg-dark">
+    <footer class="footer py-3 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Jean Forteroche
         </br>

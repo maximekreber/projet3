@@ -34,7 +34,7 @@ class PostsController extends AppController{
                 'contenu' => $_POST['contenu'],
             ]);
                      if($result){
-                return $this->index();
+                return $this->show();
             }
         }
         $this->loadModel('Comment');
