@@ -31,12 +31,16 @@
 </nav>
 <div class="container">
 
-    <div class="starter-template" style="padding-top: 100px;">
+    <div class="" style="padding-top: 100px;">
         <?= $content; ?>
     </div>
 
 </div><!-- /.container -->
 
-
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Blog d'écrivain 2018</p>
+      </div>
+    </footer>
 </body>
 </html>
