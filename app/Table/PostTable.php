@@ -13,7 +13,7 @@ class PostTable extends Table{
      */
     public function last(){
         return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date
+            SELECT articles.id, articles.titre, articles.contenu, articles.date, articles.image
             FROM articles
             ORDER BY articles.date DESC");
     }
@@ -25,7 +25,7 @@ class PostTable extends Table{
      */
     public function findWithId($id){
         return $this->query("
-            SELECT articles.id, articles.titre, articles.contenu, articles.date
+            SELECT articles.id, articles.titre, articles.contenu, articles.date, articles.image
             FROM articles
             WHERE articles.id = ?", [$id], true);
     }

@@ -19,7 +19,7 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="rounded" src=".../../../public/img/alaska.jpg" width="900" height="300" alt="image article">
+          <img class="rounded" src="<?= $article->image; ?>" width="900" height="300" alt="image article">
 
           <hr>
 
@@ -36,7 +36,8 @@
               <h5 class="card-header"><?= $comments->nom;?> a posté un commentaire le <?= $comments->date;?></h5>
               <div class="card-body">
               <?= $comments->contenu; ?>
-<p> <?php if ($comments->signale !=0) {
+
+</br></p> <?php if ($comments->signale !=0) {
      	?> <a class="btn btn-danger" href="?p=posts.signale&id=<?= $article->id; ?>&comments_id=<?= $comments->id; ?>">Commentaire Signalé</a> <?php
 
 } else {

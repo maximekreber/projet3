@@ -31,7 +31,7 @@
 </nav>
 <div class="container">
 
-    <div class="" style="padding-top: 100px;">
+    <div style="padding-top: 30px;">
         <?= $content; ?>
     </div>
 
@@ -39,7 +39,9 @@
 
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Blog d'écrivain 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Jean Forteroche
+        </br>
+        <a class="text-white" href="index.php?p=users.login">Accès au panel d'administration</a></p>
       </div>
     </footer>
 </body>

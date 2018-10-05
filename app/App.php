@@ -5,7 +5,7 @@ use Core\Database\MysqlDatabase;
 
 class App{
 
-    public $title = "Blog d'écrivain";
+    public $title = "Blog de Jean Forteroche";
     private $db_instance;
     private static $_instance;
 

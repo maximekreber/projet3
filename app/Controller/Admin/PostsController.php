@@ -21,6 +21,7 @@ class PostsController extends AppController{
             $result = $this->Post->create([
                 'titre' => $_POST['titre'],
                 'contenu' => $_POST['contenu'],
+                'image' => $_POST['image'],
             ]);
             if($result){
                 return $this->index();
@@ -37,6 +38,7 @@ class PostsController extends AppController{
             $result = $this->Post->update($_GET['id'], [
                 'titre' => $_POST['titre'],
                 'contenu' => $_POST['contenu'],
+                'image' => $_POST['image'],
             ]);
             if($result){
                 return $this->index();
