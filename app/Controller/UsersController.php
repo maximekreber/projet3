@@ -10,6 +10,9 @@ class UsersController extends AppController {
 
     public function login(){
         $errors = false;
+        $app = App::getInstance();
+        $auth = new DBAuth($app->getDb());
+        if(!$auth->logged()){
         if(!empty($_POST)){
             $auth = new DBAuth(App::getInstance()->getDb());
             if($auth->login($_POST['username'], $_POST['password'])){
@@ -20,6 +23,10 @@ class UsersController extends AppController {
         }
         $form = new BootstrapForm($_POST);
         $this->render('users.login', compact('form', 'errors'));
+    } else {
+        header('Location: index.php?p=admin.posts.index');
     }
+    }
+
 
 }

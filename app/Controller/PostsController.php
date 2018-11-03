@@ -26,7 +26,7 @@ class PostsController extends AppController{
     }
 
      public function addcomment(){
-        if (!empty($_POST)) {
+        if (!empty($_POST['nom']) AND !empty($_POST['contenu']) AND isset($_POST['nom']) AND isset($_POST['contenu']) AND !ctype_space($_POST['nom']) AND !ctype_space($_POST['contenu'])) {
             $this->loadModel('Comment');
             $result = $this->Comment->create([
                 'articles_id' => $_POST['articles_id'],

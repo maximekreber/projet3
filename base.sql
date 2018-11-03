@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 12, 2018 at 10:49 AM
+-- Generation Time: Nov 03, 2018 at 02:43 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -25,7 +25,7 @@ CREATE TABLE `articles` (
   `titre` varchar(255) DEFAULT NULL,
   `contenu` longtext,
   `date` datetime DEFAULT CURRENT_TIMESTAMP,
-  `image` varchar(255) DEFAULT NULL
+  `image` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `comments` (
   `nom` varchar(255) DEFAULT NULL,
   `contenu` longtext,
   `date` datetime DEFAULT CURRENT_TIMESTAMP,
-  `signale` tinyint(1) NOT NULL,
+  `signale` tinyint(1) DEFAULT NULL,
   `articles_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -117,13 +117,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `users`

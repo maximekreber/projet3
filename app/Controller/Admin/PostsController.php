@@ -17,7 +17,7 @@ class PostsController extends AppController{
     }
 
     public function add(){
-        if (!empty($_POST)) {
+        if (!empty($_POST['titre']) AND !empty($_POST['image']) AND !empty($_POST['contenu']) AND isset($_POST['titre']) AND isset($_POST['image']) AND isset($_POST['contenu']) AND !ctype_space($_POST['titre']) AND !ctype_space($_POST['image']) AND !ctype_space($_POST['contenu'])) {
             $result = $this->Post->create([
                 'titre' => $_POST['titre'],
                 'contenu' => $_POST['contenu'],
